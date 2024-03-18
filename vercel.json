@@ -6,6 +6,7 @@
         "api/index.js": {
           "memory": 1024,
           "includeFiles": "wp/**"
+          "runtime": "vercel-php@0.7.0"
         }
     },
     "build": {
