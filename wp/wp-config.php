@@ -2,89 +2,78 @@
 /**
  * The base configuration for WordPress
  *
- * The wp-config.php creation script uses this file during the
- * installation. You don't have to use the web site, you can
- * copy this file to "wp-config.php" and fill in the values.
+ * The wp-config.php creation script uses this file during the installation.
+ * You don't have to use the web site, you can copy this file to "wp-config.php"
+ * and fill in the values.
  *
  * This file contains the following configurations:
  *
- * * MySQL settings
+ * * Database settings
  * * Secret keys
  * * Database table prefix
  * * ABSPATH
  *
- * @link https://codex.wordpress.org/Editing_wp-config.php
+ * @link https://wordpress.org/documentation/article/editing-wp-config-php/
  *
  * @package WordPress
  */
-define('WP_ALLOW_REPAIR', true);
-// Sendgrid settings - Read in the sendgrid auth from the config //
-define('SENDGRID_USERNAME', $_ENV["SENDGRID_USERNAME"]);
-define('SENDGRID_PASSWORD', $_ENV["SENDGRID_PASSWORD"]);
 
-// S3 Config Info - read the S3 Access Keys from the config //
-define( 'AWS_ACCESS_KEY_ID', $_ENV["AWS_ACCESS_KEY_ID"]);
-define( 'AWS_SECRET_ACCESS_KEY', $_ENV["AWS_SECRET_ACCESS_KEY"]);
-
-// ** Heroku Postgres settings - from Heroku Environment ** //
-$db = parse_url($_ENV["DATABASE_URL"] ? $_ENV["DATABASE_URL"] : "postgres://postgres.ooqsplipxzaessliovfu:[YOUR-PASSWORD]@aws-0-us-west-1.pooler.supabase.com:5432/postgres");
-
-// ** MySQL settings - You can get this info from your web host ** //
+// ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', trim($db["path"],"/"));
+if (isset($_ENV['DATABASE'])) {
+  define( 'DB_NAME', $_ENV['DATABASE'] );
+}
 
-/** MySQL database username */
-define('DB_USER', $db["user"]);
+/** Database username */
+if (isset($_ENV['USERNAME'])) {
+  define( 'DB_USER', $_ENV['USERNAME'] );
+}
 
-/** MySQL database password */
-define('DB_PASSWORD', $db["pass"]);
+/** Database password */
+if (isset($_ENV['PASSWORD'])) {
+  define( 'DB_PASSWORD', $_ENV['PASSWORD'] );
+}
 
-/** MySQL hostname */
-define('DB_HOST', $db["host"]);
+/** Database hostname */
+if (isset($_ENV['HOST'])) {
+  define( 'DB_HOST', $_ENV['HOST'] );
+}
 
-/** Database Charset to use in creating database tables. */
-define('DB_CHARSET', 'utf8');
+/** Database charset to use in creating database tables. */
+define( 'DB_CHARSET', 'utf8' );
 
-/** The Database Collate type. Don't change this if in doubt. */
-define('DB_COLLATE', '');
+/** The database collate type. Don't change this if in doubt. */
+define( 'DB_COLLATE', '' );
 
 /**#@+
- * Authentication Unique Keys and Salts.
+ * Authentication unique keys and salts.
  *
- * Change these to different unique phrases!
- * You can generate these using the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}
- * You can change these at any point in time to invalidate all existing cookies. This will force all users to have to log in again.
+ * Change these to different unique phrases! You can generate these using
+ * the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}.
+ *
+ * You can change these at any point in time to invalidate all existing cookies.
+ * This will force all users to have to log in again.
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         $_ENV["AUTH_KEY"]);
-define('SECURE_AUTH_KEY',  $_ENV["SECURE_AUTH_KEY"]);
-define('LOGGED_IN_KEY',    $_ENV["LOGGED_IN_KEY"]);
-define('NONCE_KEY',        $_ENV["NONCE_KEY"]);
-define('AUTH_SALT',        $_ENV["AUTH_SALT"]);
-define('SECURE_AUTH_SALT', $_ENV["SECURE_AUTH_SALT"]);
-define('LOGGED_IN_SALT',   $_ENV["LOGGED_IN_SALT"]);
-define('NONCE_SALT',       $_ENV["NONCE_SALT"]);
+define( 'AUTH_KEY',         'put your unique phrase here' );
+define( 'SECURE_AUTH_KEY',  'put your unique phrase here' );
+define( 'LOGGED_IN_KEY',    'put your unique phrase here' );
+define( 'NONCE_KEY',        'put your unique phrase here' );
+define( 'AUTH_SALT',        'put your unique phrase here' );
+define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
+define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
+define( 'NONCE_SALT',       'put your unique phrase here' );
 
 /**#@-*/
 
 /**
- * WordPress Database Table prefix.
+ * WordPress database table prefix.
  *
- * You can have multiple installations in one database if you give each a unique
- * prefix. Only numbers, letters, and underscores please!
+ * You can have multiple installations in one database if you give each
+ * a unique prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix  = 'wp_';
-
-/**
- * WordPress Localized Language, defaults to English.
- *
- * Change this to localize WordPress. A corresponding MO file for the chosen
- * language must be installed to wp-content/languages. For example, install
- * de_DE.mo to wp-content/languages and set WPLANG to 'de_DE' to enable German
- * language support.
- */
-define('WPLANG', 'en');
+$table_prefix = isset($_ENV['TABLE_PREFIX']) ? $_ENV['TABLE_PREFIX'] : 'wp_';
 
 /**
  * For developers: WordPress debugging mode.
@@ -92,15 +81,38 @@ define('WPLANG', 'en');
  * Change this to true to enable the display of notices during development.
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
+ *
+ * For information on other constants that can be used for debugging,
+ * visit the documentation.
+ *
+ * @link https://wordpress.org/documentation/article/debugging-in-wordpress/
  */
-define('WP_DEBUG', false);
-define( 'WP_AUTO_UPDATE_CORE', false );
+define( 'WP_DEBUG', false );
 
-/* That's all, stop editing! Happy blogging. */
+/* Add any custom values between this line and the "stop editing" line. */
+
+define('MYSQL_CLIENT_FLAGS', MYSQLI_CLIENT_SSL );
+$_SERVER['HTTPS'] = 'on';
+
+// Optional S3 credentials for file storage.
+if (isset($_ENV['S3_KEY_ID']) && isset($_ENV['S3_ACCESS_KEY'])) {
+	define( 'AS3CF_SETTINGS', serialize( array(
+        'provider' => 'aws',
+        'access-key-id' => $_ENV['S3_KEY_ID'],
+        'secret-access-key' => $_ENV['S3_ACCESS_KEY'],
+) ) );
+}
+
+// Disable file modification because the changes won't be persisted.
+define('DISALLOW_FILE_EDIT', true );
+define('DISALLOW_FILE_MODS', true );
+
+/* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
-if ( !defined('ABSPATH') )
-	define('ABSPATH', dirname(__FILE__) . '/');
+if ( ! defined( 'ABSPATH' ) ) {
+	define( 'ABSPATH', __DIR__ . '/' );
+}
 
 /** Sets up WordPress vars and included files. */
-require_once(ABSPATH . 'wp-settings.php');
+require_once ABSPATH . 'wp-settings.php';
