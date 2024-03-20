@@ -1,0 +1,267 @@
+# <!=Copyright (C) 2023 Catch Themes
+# This file is distributed under the GNU General Public License v2 or later.=!>
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: High Life\n"
+"Report-Msgid-Bugs-To: https://catchthemes.com/contact-us/\n"
+"POT-Creation-Date: 2024-02-20 22:28+0545\n"
+"PO-Revision-Date: 2023-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Catch Themes <info@catchthemes.com>\n"
+"Language-Team: Catch Themes <info@catchthemes.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c\n"
+"X-Poedit-Basepath: ..\n"
+"X-Textdomain-Support: yes\n"
+"X-Generator: Poedit 3.4.2\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: inc/about.php:27 inc/block-patterns.php:18
+msgid "High Life"
+msgstr ""
+
+#: inc/about.php:46
+msgid "Free Full Site Editing WordPress Theme"
+msgstr ""
+
+#: inc/about.php:54
+msgid "Getting Started with High Life!"
+msgstr ""
+
+#: inc/about.php:55
+msgid ""
+"Awesome! High Life has been installed and activated successfully. Now, you "
+"can start building your dream website with a wide range of highly-"
+"customizable block patterns, templates, and template parts available in this "
+"astounding theme."
+msgstr ""
+
+#: inc/about.php:56
+msgid "Theme instructions"
+msgstr ""
+
+#: inc/about.php:62
+msgid "More Features with High Life Pro Theme"
+msgstr ""
+
+#: inc/about.php:63
+msgid ""
+"To get more beautiful block patterns and templates, we recommend you upgrade "
+"to High Life Pro. With the pro theme installed, get more options, blocks, "
+"block patterns, templates and template parts."
+msgstr ""
+
+#: inc/about.php:64
+msgid "Buy High Life Pro"
+msgstr ""
+
+#: inc/about.php:73
+msgid "Important Links"
+msgstr ""
+
+#: inc/about.php:74
+msgid "Theme Info"
+msgstr ""
+
+#: inc/about.php:75
+msgid "View Demo"
+msgstr ""
+
+#: inc/about.php:76
+msgid "FSE FAQs"
+msgstr ""
+
+#: inc/about.php:77
+msgid "Change log"
+msgstr ""
+
+#: inc/about.php:78
+msgid "Support"
+msgstr ""
+
+#: inc/about.php:85
+msgid "Leave us a review"
+msgstr ""
+
+#: inc/about.php:86
+msgid ""
+"Loved High Life? Feel free to leave your feedback. Your opinion helps us "
+"reach more audiences!"
+msgstr ""
+
+#: inc/about.php:87
+msgid "Review"
+msgstr ""
+
+#: inc/block-patterns.php:19
+msgid "Pages"
+msgstr ""
+
+#: inc/block-styles.php:26
+msgid "No Padding"
+msgstr ""
+
+#: inc/block-styles.php:35
+msgid "Gap Zero"
+msgstr ""
+
+#: inc/block-styles.php:44 inc/block-styles.php:62 inc/block-styles.php:71
+#: inc/block-styles.php:80 inc/block-styles.php:89 inc/block-styles.php:99
+#: inc/block-styles.php:109 inc/block-styles.php:118
+msgid "Theme Style"
+msgstr ""
+
+#: inc/block-styles.php:53
+msgid "Plain"
+msgstr ""
+
+#: inc/icon-function.php:38
+msgid "Please define default parameters in the form of an array."
+msgstr ""
+
+#: inc/icon-function.php:43
+msgid "Please define an SVG icon filename."
+msgstr ""
+
+#: patterns/404-header.php:24
+msgid "404 Nothing Found"
+msgstr ""
+
+#: patterns/404-header.php:29
+msgid "Oops! That page can't be found"
+msgstr ""
+
+#: patterns/blog-header.php:25
+msgid "Recent From Blog"
+msgstr ""
+
+#: patterns/featured-category.php:20
+msgid "Featured Category"
+msgstr ""
+
+#: patterns/featured-category.php:23
+msgid ""
+"Exploring Ideas of your own VR World Reality own VR Exploring Ideas of your "
+"own VR World Reality own VR."
+msgstr ""
+
+#: patterns/featured-category.php:37
+msgid "View Products"
+msgstr ""
+
+#: patterns/footer-three-columns.php:23
+msgid "Highlife"
+msgstr ""
+
+#: patterns/footer-three-columns.php:37
+msgid "Solution"
+msgstr ""
+
+#: patterns/footer-three-columns.php:47
+msgid "Say Hello"
+msgstr ""
+
+#: patterns/footer-three-columns.php:52
+msgid "info@company.com"
+msgstr ""
+
+#: patterns/header-media.php:21
+msgid "Multi-Chain Next Generation Project"
+msgstr ""
+
+#: patterns/header-media.php:26
+msgid ""
+"Exploring Ideas of your own VR World ity VR World Ideas Reality of you "
+"Reality own VR World Reality."
+msgstr ""
+
+#: patterns/header-media.php:34
+msgid "Explore More"
+msgstr ""
+
+#: patterns/hero-content-with-collage-images.php:54
+msgid "Creating Reality Products"
+msgstr ""
+
+#: patterns/hero-content-with-collage-images.php:57
+msgid ""
+"Exploring Ideas of your own VR World ity own VR World Ideas of your own VR "
+"World ity own Reality own VR World Reality readable content of a page when "
+"looking layout."
+msgstr ""
+
+#: patterns/hero-content-with-collage-images.php:65
+msgid "Read more"
+msgstr ""
+
+#: patterns/hidden-404.php:10
+msgid "This page could not be found. Maybe try a search?"
+msgstr ""
+
+#: patterns/latest-products.php:14
+msgid "Latest Products"
+msgstr ""
+
+#: patterns/mobile-sticky-icon-menu.php:21
+msgid "Home"
+msgstr ""
+
+#: patterns/mobile-sticky-icon-menu.php:38
+msgid "Shop"
+msgstr ""
+
+#: patterns/quick-contact-form.php:19
+msgid "Lets Talk."
+msgstr ""
+
+#: patterns/quick-contact-form.php:23
+msgid ""
+"An online quick contact form is a quick and easy way to collect information "
+"from website visitors."
+msgstr ""
+
+#: patterns/sidebar-products.php:16 patterns/sidebar.php:32
+msgid "Categories"
+msgstr ""
+
+#: patterns/sidebar-products.php:26
+msgid "Filter by price"
+msgstr ""
+
+#: patterns/sidebar-products.php:42
+msgid "Filter by size"
+msgstr ""
+
+#: patterns/sidebar-products.php:58
+msgid "Filter by Color"
+msgstr ""
+
+#: patterns/sidebar.php:19
+msgid "Author"
+msgstr ""
+
+#: patterns/sidebar.php:25
+msgid ""
+"Style is s a form of self-expression and autonomy at a particular period and "
+"place and in a specific context, of clothing, footwear, lifestyle, "
+"accessories, makeup, hairstyle, and body posture."
+msgstr ""
+
+#: patterns/sidebar.php:40
+msgid "Recent Post"
+msgstr ""
+
+#: patterns/sidebar.php:48
+msgid "Tags"
+msgstr ""
+
+#: patterns/trending-products.php:17
+msgid "Trending Products"
+msgstr ""

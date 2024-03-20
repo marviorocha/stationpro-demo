@@ -1,0 +1,33 @@
+/* --- Block Contact
+-------------------------------------------------------- */
+
+/* --- Block Quick Contact
+-------------------------------------------------------- */
+
+.wp-block-section.wp-block-quick-contact .wp-block-group-heading {
+    margin-bottom: 0;
+}
+
+.wp-block-section.wp-block-quick-contact.wp-block-cover {
+    min-height: auto;
+}
+
+
+
+@media screen and (max-width: 48.8125em) {
+    .wp-block-quick-contact .wp-block-column .wp-block-buttons {
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .wp-block-quick-contact .wp-block-media-text .wp-block-media-text__content {
+        grid-row: 2;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .wp-block-quick-contact .wp-block-media-text .wp-block-media-text__content {
+        grid-row: 1;
+    }
+}

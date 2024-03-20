@@ -1,0 +1,40 @@
+/*
+Theme Name: High Life
+Theme URI: https://catchthemes.com/themes/high-life
+Author: Catch Themes
+Author URI: https://catchthemes.com
+Description: High Life is a beautiful and vibrant free electronics WordPress eCommerce block theme. The theme is ideal for tech stores, gadgets and mobile stores, digital stores, multivendor shops, and any other electrical appliance-related sites. Its clean style makes the theme a good fit for selling electronics and also can be used for any other eCommerce niche. The theme is beautifully designed that will encourage visitors to purchase and review high-end products. This eCommerce theme lets you manage your electronics store and transform the offline market into a spacious digitalized eCommerce platform. The High Life is the theme that you need to set up your online electronics store and reach new heights in the business. There are 17+ block patterns, 17 Templates, and 11 Template Parts. Some of the block patterns are 404 Header, Archive Post Header, Blog Header, Featured Category, Footer Three Columns, Header Media, Header With Cart Banner, Hero Content With Collage Images, Hidden 404, Latest Products, Post Header, Quick Contact Form, Search Header, Shop Header, Sidebar Products, Trending Products, and many more. The theme has a powerful and user-friendly customizer panel that enhances your developing experience. It has clean and secure theme codes. And, the theme has speed optimized page, making it load faster.
+Tested up to: 6.4
+Requires at least: 5.9
+Requires PHP: 7.4
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: high-life
+Tags: e-commerce, blog, portfolio, one-column, two-columns, left-sidebar, right-sidebar, block-patterns, block-styles, custom-background, custom-logo, custom-menu, featured-images, footer-widgets, full-site-editing, threaded-comments, wide-blocks, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+High Life is based on Catch FSE WordPress Theme, 2012-2022 Catchthemes.com
+Catch FSE is distributed under the terms of the GNU GPL.
+*/
+
+
+/*--------------------------------------------------------------
+# Blocks
+--------------------------------------------------------------*/
+@import "sass/blocks/all-blocks";
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+@import "sass/patterns/all-patterns";
+
+/* --- Block Media Quries
+-------------------------------------------------------- */
+@import 'sass/media-query';
+
+/* --- Block Color
+-------------------------------------------------------- */
+@import 'sass/color';

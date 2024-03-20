@@ -1,0 +1,54 @@
+/* --- Our Studio
+-------------------------------------------------------- */
+.wp-block-our-identity {
+    .wp-block-image {
+        position: relative;
+        transition: all 0.8s;
+        left: 50px;
+        opacity: 0;
+        clip-path: polygon(0 0, 0 0, 100% 0, 100% 0);
+        transform-origin: left;
+    }
+
+    .wp-block-group-heading+.wp-block-image {
+        left: 150px;
+        transition-delay: 0.4s;
+    }
+
+    &.transition-element {
+        .wp-block-image {
+            left: 0;
+            opacity: 1;
+            clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+        }
+
+        .wp-block-group-heading+.wp-block-image {
+            left: 0;
+        }
+    }
+
+    .wp-block-column:last-child .wp-block-section-content {
+        top: 70px;
+        opacity: 0;
+        transition: all 0.4s;
+    }
+
+    &.transition-element {
+        .wp-block-column:last-child .wp-block-section-content {
+            top: 0;
+            opacity: 1;
+        }
+    }
+
+}
+
+.block-editor-block-list__block.wp-block-our-identity .wp-block-column .wp-block-section-content,
+.block-editor-block-list__block.wp-block-our-identity .wp-block-image {
+    opacity: 1;
+    left: 0;
+    top: 0
+}
+
+.block-editor-block-list__block.wp-block-our-identity .wp-block-image {
+    clip-path: none;
+}

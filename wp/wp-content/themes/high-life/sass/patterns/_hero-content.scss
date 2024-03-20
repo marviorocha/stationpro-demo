@@ -1,0 +1,26 @@
+/* --- Block Hero Content
+-------------------------------------------------------- */
+.wp-block-section.wp-hero-content .wp-block-group-heading,
+.wp-block-section.wp-hero-content-with-collage-images .wp-block-group-heading {
+    margin-bottom: 28px;
+    position: relative;
+}
+
+.wp-block-media-text.is-stacked-on-mobile {
+    grid-template-columns: 100% !important;
+}
+
+.wp-block-media-text .wp-block-media-text__content {
+    grid-column: 1;
+    padding: 7% 5%;
+}
+
+body .wp-block-image-collage .is-layout-flex {
+    display: flex;
+    flex-wrap: nowrap !important;
+}
+
+.wp-block-image-collage .wp-block-image {
+    border-radius: 10px;
+    overflow: hidden;
+}
