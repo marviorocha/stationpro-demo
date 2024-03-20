@@ -1,0 +1,41 @@
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+
+    input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        height: 15px;
+        width: 15px;
+        cursor: grabbing;
+        background-color: #FFF;
+        border-radius: 50%;
+        border: 2px solid rgb(34 211 238);
+        box-shadow: -407px 0 0 400px rgb(34 211 238);
+    }
+
+}
+
+/* COMMON */
+.material-icons {
+    color:
+    color: rgba(0,0,0,0.87);
+}
+
+.material-icons.md-36 {
+    font-size: 36px;
+}
+
+.material-icons.md-48 {
+    font-size: 48px;
+}
+
+.material-icons.tomato {
+    color: tomato;
+}
+
+.material-icons.royalblue {
+    color: royalblue;
+}
+
+[x-cloak] {
+    display: none !important;
+}
